@@ -1,0 +1,11 @@
+# User-provided knowledge; never distribute
+/recipe/
+
+# Generated search index
+/index/
+
+# Extracted licensed documentation; never distribute
+/*_extracted/
+/*_docs/
+/*_full/
+/arquivos promissores/

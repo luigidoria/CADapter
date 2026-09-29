@@ -1,0 +1,1520 @@
+[
+ {
+  "name": "gab_sketch_linha",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.line",
+    {
+     "x1": 0,
+     "y1": 0,
+     "x2": 40,
+     "y2": 0
+    }
+   ],
+   [
+    "sketch.line",
+    {
+     "x1": 40,
+     "y1": 0,
+     "x2": 0,
+     "y2": 30
+    }
+   ],
+   [
+    "sketch.line",
+    {
+     "x1": 0,
+     "y1": 30,
+     "x2": 0,
+     "y2": 0
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 10,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_retangulo",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_circulo",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.cylinder",
+    {
+     "diameter_mm": 20,
+     "height_mm": 30
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_poligono",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "polygon",
+     "cx": 0,
+     "cy": 0,
+     "r": 20,
+     "sides": 6
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 15,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_slot",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "slot",
+     "width": 10,
+     "x1": 0,
+     "y1": 0,
+     "x2": 30,
+     "y2": 0
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 8,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_spline",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "spline",
+     "points": [
+      [
+       0,
+       0
+      ],
+      [
+       30,
+       10
+      ],
+      [
+       50,
+       0
+      ],
+      [
+       25,
+       -20
+      ],
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 5,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_arco",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.line",
+    {
+     "x1": -20,
+     "y1": 0,
+     "x2": 20,
+     "y2": 0
+    }
+   ],
+   [
+    "sketch.arc_tangent",
+    {
+     "x1": 20,
+     "y1": 0,
+     "x2": -20,
+     "y2": 0
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 10,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_concentrico",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.circle",
+    {
+     "cx": 0,
+     "cy": 0,
+     "r": 20
+    }
+   ],
+   [
+    "sketch.circle",
+    {
+     "cx": 5,
+     "cy": 5,
+     "r": 10
+    }
+   ],
+   [
+    "sketch.relation",
+    {
+     "entities": [
+      "$2",
+      "$3"
+     ],
+     "kind": "concentric"
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 10,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_sketch_cota_sketch",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.rect",
+    {
+     "x1": 0,
+     "y1": 0,
+     "x2": 40,
+     "y2": 40
+    }
+   ],
+   [
+    "sketch.dimension",
+    {
+     "entities": [
+      "$2[0]"
+     ],
+     "at": [
+      20,
+      -10
+     ],
+     "name": "largura",
+     "orient": "horizontal"
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 10,
+     "kind": "boss"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_corte",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "rect",
+     "x1": 20,
+     "y1": 10,
+     "x2": 30,
+     "y2": 20
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 0,
+     "kind": "cut",
+     "through_all": true,
+     "reverse": true
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_furo",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "top",
+     "diameter_mm": 8,
+     "positions": [
+      [
+       25,
+       10
+      ]
+     ]
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_ressalto",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 60,
+     "height_mm": 20,
+     "depth_mm": 30
+    }
+   ],
+   [
+    "part.block",
+    {
+     "face": "top",
+     "width_mm": 20,
+     "height_mm": 20,
+     "depth_mm": 30,
+     "at": [
+      30,
+      15
+     ]
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_fillet",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 30,
+     "height_mm": 30,
+     "depth_mm": 30
+    }
+   ],
+   [
+    "part.fillet",
+    {
+     "radius_mm": 3,
+     "edges": "all"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_chanfro",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 30,
+     "height_mm": 30,
+     "depth_mm": 30
+    }
+   ],
+   [
+    "part.chamfer",
+    {
+     "dist_mm": 3,
+     "edges": "all"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_revolve",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.rect",
+    {
+     "x1": 30,
+     "y1": 0,
+     "x2": 40,
+     "y2": 20
+    }
+   ],
+   [
+    "sketch.centerline",
+    {
+     "x1": 0,
+     "y1": 0,
+     "x2": 0,
+     "y2": 20
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.revolve",
+    {
+     "angle_deg": 360
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_casca",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 1,
+     "want_max": true
+    }
+   ],
+   [
+    "part.shell",
+    {
+     "thickness_mm": 2,
+     "remove_faces": [
+      "$2"
+     ]
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_scale",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 40,
+     "height_mm": 40,
+     "depth_mm": 40
+    }
+   ],
+   [
+    "part.scale",
+    {
+     "factor": 0.5
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_sweep",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "line",
+     "x1": 0,
+     "y1": 0,
+     "x2": 0,
+     "y2": 60
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Top",
+     "shape": "circle",
+     "cx": 0,
+     "cy": 0,
+     "r": 8
+    }
+   ],
+   [
+    "part.sweep",
+    {
+     "profile_sketch": "Sketch2",
+     "path_sketch": "Sketch1"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_loft",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Top",
+     "shape": "circle",
+     "cx": 0,
+     "cy": 0,
+     "r": 20
+    }
+   ],
+   [
+    "part.reference_plane",
+    {
+     "from_plane": "Top",
+     "offset_mm": 50,
+     "name": "alto"
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "alto",
+     "shape": "circle",
+     "cx": 0,
+     "cy": 0,
+     "r": 8
+    }
+   ],
+   [
+    "part.loft",
+    {
+     "profile_sketches": [
+      "Sketch1",
+      "Sketch2"
+     ]
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_combine",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Top",
+     "shape": "rect",
+     "x1": 0,
+     "y1": 0,
+     "x2": 60,
+     "y2": 60
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 20,
+     "kind": "boss"
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Top",
+     "shape": "rect",
+     "x1": 40,
+     "y1": 0,
+     "x2": 100,
+     "y2": 60
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 20,
+     "kind": "boss",
+     "merge": false
+    }
+   ],
+   [
+    "part.combine",
+    {
+     "operation": "add"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_draft",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 60,
+     "height_mm": 60,
+     "depth_mm": 40
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 2,
+     "want_max": true
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 0,
+     "want_max": true
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 0,
+     "want_max": false
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 1,
+     "want_max": true
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 1,
+     "want_max": false
+    }
+   ],
+   [
+    "part.draft",
+    {
+     "neutral": "$2",
+     "faces": [
+      "$3",
+      "$4",
+      "$5",
+      "$6"
+     ],
+     "angle_deg": 5
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_solid_countersink",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.countersink",
+    {
+     "face": "front",
+     "positions": [
+      [
+       25,
+       15
+      ]
+     ],
+     "d_hole_mm": 8,
+     "d_sink_mm": 16,
+     "angle_deg": 90
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_pattern_padrao_linear",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 60,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "top",
+     "diameter_mm": 6,
+     "positions": [
+      [
+       10,
+       10
+      ]
+     ]
+    }
+   ],
+   [
+    "inspect.find_edge",
+    {
+     "axis": 0
+    }
+   ],
+   [
+    "part.pattern_linear",
+    {
+     "count": 3,
+     "spacing_mm": 20,
+     "reverse": true,
+     "direction_edge": "$3",
+     "seed_feature": "$2"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_pattern_padrao_circular",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.cylinder",
+    {
+     "diameter_mm": 60,
+     "height_mm": 10
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "kind": "cylinder"
+    }
+   ],
+   [
+    "part.axis_from_face",
+    {
+     "face": "$2",
+     "name": "EixoCentral"
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "front",
+     "diameter_mm": 6,
+     "positions": [
+      [
+       20,
+       0
+      ]
+     ]
+    }
+   ],
+   [
+    "part.pattern_circular",
+    {
+     "axis": "$3",
+     "count": 4,
+     "seed_feature": "$4"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_pattern_espelho",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 60,
+     "height_mm": 30,
+     "depth_mm": 20,
+     "x": -30,
+     "y": -15
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "top",
+     "diameter_mm": 6,
+     "positions": [
+      [
+       15,
+       10
+      ]
+     ]
+    }
+   ],
+   [
+    "part.pattern_mirror",
+    {
+     "mirror_plane": "Right",
+     "seed_feature": "$2"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_datum_plano_referencia",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.reference_plane",
+    {
+     "from_plane": "Front",
+     "offset_mm": 40,
+     "name": "PlanoOffset"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_datum_eixo_de_face",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.cylinder",
+    {
+     "diameter_mm": 20,
+     "height_mm": 40
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "kind": "cylinder"
+    }
+   ],
+   [
+    "part.axis_from_face",
+    {
+     "face": "$2",
+     "name": "EixoDoCilindro"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_parametric_cota_feature",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 50,
+     "height_mm": 30,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.set_dimension",
+    {
+     "name": "D1@Boss-Extrude1",
+     "value_mm": 40
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_parametric_material",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 25,
+     "height_mm": 25,
+     "depth_mm": 25
+    }
+   ],
+   [
+    "part.set_material",
+    {
+     "name": "aluminio 1060"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_parametric_propriedade",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 30,
+     "height_mm": 30,
+     "depth_mm": 10
+    }
+   ],
+   [
+    "part.set_property",
+    {
+     "name": "Descricao",
+     "value": "Placa base"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_parametric_equacoes",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 40,
+     "height_mm": 40,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "part.fillet",
+    {
+     "radius_mm": 5,
+     "edges": "all"
+    }
+   ],
+   [
+    "part.add_equation",
+    {
+     "equation": "\"raio\" = 8"
+    }
+   ],
+   [
+    "part.add_equation",
+    {
+     "equation": "\"folga\" = 0.3"
+    }
+   ],
+   [
+    "part.add_equation",
+    {
+     "equation": "\"D1@Fillet1\" = \"raio\" - \"folga\""
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_parametric_tolerancia",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "sketch.begin",
+    {
+     "plane": "Front"
+    }
+   ],
+   [
+    "sketch.rect",
+    {
+     "x1": 0,
+     "y1": 0,
+     "x2": 80,
+     "y2": 50
+    }
+   ],
+   [
+    "sketch.dimension",
+    {
+     "entities": [
+      "$2[0]"
+     ],
+     "at": [
+      40,
+      -15
+     ],
+     "name": "Lx",
+     "orient": "horizontal"
+    }
+   ],
+   [
+    "sketch.end",
+    {}
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 20,
+     "kind": "boss"
+    }
+   ],
+   [
+    "part.set_tolerance",
+    {
+     "dim_name": "$3",
+     "kind": "symmetric",
+     "upper_mm": 0.15
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_compound_flange",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.cylinder",
+    {
+     "diameter_mm": 80,
+     "height_mm": 12
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "kind": "cylinder"
+    }
+   ],
+   [
+    "part.axis_from_face",
+    {
+     "face": "$2",
+     "name": "EixoFlange"
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "front",
+     "diameter_mm": 30,
+     "positions": [
+      [
+       0,
+       0
+      ]
+     ]
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "front",
+     "diameter_mm": 8,
+     "positions": [
+      [
+       30,
+       0
+      ]
+     ]
+    }
+   ],
+   [
+    "part.pattern_circular",
+    {
+     "axis": "$3",
+     "count": 4,
+     "seed_feature": "$5"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_compound_cantoneira",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 80,
+     "height_mm": 10,
+     "depth_mm": 60
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "plane": "Front",
+     "shape": "rect",
+     "x1": 0,
+     "y1": 0,
+     "x2": 10,
+     "y2": 60
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 60,
+     "kind": "boss"
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "top",
+     "diameter_mm": 10,
+     "positions": [
+      [
+       45,
+       15
+      ],
+      [
+       45,
+       45
+      ]
+     ],
+     "face_point": [
+      45,
+      10,
+      30
+     ]
+    }
+   ],
+   [
+    "part.fillet",
+    {
+     "radius_mm": 3,
+     "edges": "all"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_compound_eixo_escalonado",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.cylinder",
+    {
+     "diameter_mm": 40,
+     "height_mm": 20
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "face": "front",
+     "shape": "circle",
+     "cx": 0,
+     "cy": 0,
+     "r": 15
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 30,
+     "kind": "boss"
+    }
+   ],
+   [
+    "part.sketch",
+    {
+     "face": "front",
+     "shape": "circle",
+     "cx": 0,
+     "cy": 0,
+     "r": 10
+    }
+   ],
+   [
+    "part.extrude",
+    {
+     "depth_mm": 25,
+     "kind": "boss"
+    }
+   ],
+   [
+    "part.chamfer",
+    {
+     "dist_mm": 1,
+     "edges": "all"
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_compound_tampa",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 60,
+     "height_mm": 40,
+     "depth_mm": 20
+    }
+   ],
+   [
+    "inspect.find_face",
+    {
+     "axis": 1,
+     "want_max": false
+    }
+   ],
+   [
+    "part.shell",
+    {
+     "thickness_mm": 3,
+     "remove_faces": [
+      "$2"
+     ]
+    }
+   ],
+   [
+    "part.hole",
+    {
+     "face": "top",
+     "diameter_mm": 5,
+     "positions": [
+      [
+       10,
+       5
+      ],
+      [
+       50,
+       5
+      ],
+      [
+       10,
+       15
+      ],
+      [
+       50,
+       15
+      ]
+     ]
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ },
+ {
+  "name": "gab_compound_placa_escareada",
+  "domain": "part",
+  "steps": [
+   [
+    "part.new_part",
+    {}
+   ],
+   [
+    "part.block",
+    {
+     "width_mm": 100,
+     "height_mm": 60,
+     "depth_mm": 10
+    }
+   ],
+   [
+    "part.countersink",
+    {
+     "face": "front",
+     "positions": [
+      [
+       25,
+       30
+      ],
+      [
+       75,
+       30
+      ]
+     ],
+     "d_hole_mm": 8,
+     "d_sink_mm": 16,
+     "angle_deg": 90
+    }
+   ]
+  ],
+  "source": "suite_verbs"
+ }
+]

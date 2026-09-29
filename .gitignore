@@ -1,0 +1,21 @@
+# Python environments and bytecode
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local configuration and editor settings
+.env
+/*_config.json
+
+# Generated output at the repository root, including legacy locations
+/sessions*/
+/logs/
+/dataset/
+/dist/
+/*_index/
+/*_backup_*/
+/_backup_*/
+
+# SOLIDWORKS lock files
+~$*

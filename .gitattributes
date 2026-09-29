@@ -1,0 +1,28 @@
+# CAD artifacts and indexes: treat as BINARY (no line-ending conversion).
+# The .x_t/.step are text, but Parasolid/STEP are picky -- CRLF can break the import.
+*.sldprt  binary
+*.sldasm  binary
+*.slddrw  binary
+*.prtdot  binary
+*.asmdot  binary
+*.drwdot  binary
+*.slddrt  binary
+*.x_t     binary
+*.x_b     binary
+*.step    binary
+*.stp     binary
+*.iges    binary
+*.igs     binary
+*.stl     binary
+*.swp     binary
+*.swb     binary
+
+# Generated images and documents
+*.png     binary
+*.bmp     binary
+*.jpg     binary
+*.pdf     binary
+
+# RAG indexes (ChromaDB)
+*.sqlite3 binary
+*.bin     binary

@@ -1,0 +1,17 @@
+# Temporary checks and generated CAD outputs
+/_scratch/
+/validation_assembly/*
+!/validation_assembly/*.py
+/validation_mcp_tools/
+/Cadeira/
+/goldens_macro/
+
+
+# Version test outputs; preserve recorded baselines
+/version/work/
+/version/reports/*
+!/version/reports/BASELINE_*.json
+
+# Keep text macros; ignore generated binaries
+/recorded_macros/*
+!/recorded_macros/*.bas
