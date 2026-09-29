@@ -1,0 +1,11 @@
+CADapter V1 - source export
+Layers: mcp + engine + rag infrastructure
+Exported source files: 58
+Static release scans: PASS
+Exported file list and SHA-256 comparison with rendered sources: PASS
+Private recipe content and generated RAG database: NOT INCLUDED
+Windows import validation: PENDING
+The Linux import check failed because pythoncom is unavailable.
+MCP and engine entry points must be validated with Windows dependencies.
+Live SOLIDWORKS 2017/2026 validation: NOT PERFORMED
+This is a source snapshot, not a Windows-validated release.

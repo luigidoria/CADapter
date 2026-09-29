@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "solidworks": {
+      "type": "stdio",
+      "command": ".venv\\Scripts\\python.exe",
+      "args": [
+        "mcp_server/sw_session_logger.py"
+      ],
+      "env": {
+        "SESSION_DIR": "sessions",
+        "WRAPPED_SERVER": "mcp_server/mcp_solidworks.py"
+      }
+    }
+  }
+}
