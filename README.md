@@ -116,8 +116,10 @@ python -m venv .venv
 .venv\Scripts\python.exe mcp_server/build_api_signatures_typelib.py
 ```
 
-Open SOLIDWORKS, then configure an MCP client with `.mcp.json`. See the
-[setup guide](mcp_server/docs/SETUP.md), [MCP tool reference](mcp_server/README.md),
+Open SOLIDWORKS, then connect an MCP client: Claude Code picks up `.mcp.json` inside
+this checkout, and `claude mcp add --scope user` registers CADapter for every folder.
+See the [setup guide](mcp_server/docs/SETUP.md#connect-an-mcp-client) for both and for
+other clients, the [MCP tool reference](mcp_server/README.md),
 and [curated API guide](solidworks/README.md).
 
 ## Documentation
