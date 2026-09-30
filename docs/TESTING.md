@@ -43,17 +43,6 @@ because installed bend-table resources were unavailable; they are not passes. La
 documentation or release-evidence commits are not themselves claims of another
 SOLIDWORKS run.
 
-Test environment: both versions ran on the same Windows machine, where SOLIDWORKS 2017
-and 2026 are installed side by side, each in a freshly started session with no other
-CAD client attached. CADapter attaches to `SldWorks.Application` and binds to the
-highest registered SOLIDWORKS type library; on this machine both resolve to 2026. For
-the SW2017 run, per-user (HKCU) registry overrides pointed both at the 2017
-installation and were removed afterwards. Without them, a SW2017 session driven through
-the 2026 type library fails on `IComponent2.GetSuppression2`. The factory default part
-and assembly templates were missing from that SW2017 installation, so it used the
-installed English tutorial templates with the reference planes renamed to
-`Front Plane`, `Top Plane` and `Right Plane`.
-
 ### Same-commit cross-version comparison
 
 The reports from the validated commit produced `ASSEMBLY=7`, `RESULT=28` and `FILE=2`.
