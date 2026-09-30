@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T18:59:53+00:00",
-    "git_commit": "2490209",
+    "generated_at": "2026-09-29T23:37:55+00:00",
+    "git_commit": "db6804a",
     "python": "3.13.13",
-    "seconds": 1594.8,
+    "seconds": 408.5,
     "server_verbs": null,
     "surfaces": [
       "curated"
@@ -3388,7 +3388,7 @@
             ],
             "caixa_parcial": false,
             "com_mm": [
-              -0.0,
+              0.0,
               30.0,
               7.5
             ],
@@ -4419,10 +4419,10 @@
     },
     {
       "arquivos": {
-        "bv_bloco.sldprt": 56813,
-        "bv_bloco.step": 15840,
+        "bv_bloco.sldprt": 59105,
+        "bv_bloco.step": 15839,
         "bv_bloco.stl": 684,
-        "bv_bloco.x_t": 7040
+        "bv_bloco.x_t": 7052
       },
       "domain": "part",
       "name": "exportar_formatos",
@@ -4616,8 +4616,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 54792,
-        "bv_tampa.sldprt": 54943
+        "bv_base.sldprt": 55331,
+        "bv_tampa.sldprt": 55163
       },
       "domain": "asm",
       "name": "asm_pecas_de_apoio",
@@ -4784,8 +4784,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 54792,
-        "bv_tampa.sldprt": 54943
+        "bv_base.sldprt": 55331,
+        "bv_tampa.sldprt": 55163
       },
       "domain": "asm",
       "name": "asm_mate_faces_empilhado",
@@ -5069,8 +5069,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 54792,
-        "bv_tampa.sldprt": 54943
+        "bv_base.sldprt": 55331,
+        "bv_tampa.sldprt": 55163
       },
       "domain": "asm",
       "name": "asm_mate_ordem_invertida",
@@ -5308,8 +5308,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 54792,
-        "bv_tampa.sldprt": 54943
+        "bv_base.sldprt": 55331,
+        "bv_tampa.sldprt": 55163
       },
       "domain": "asm",
       "name": "asm_remover_e_recontar",
@@ -5539,9 +5539,9 @@
     },
     {
       "arquivos": {
-        "bv_viga.pdf": 39743,
-        "bv_viga.slddrw": 74602,
-        "bv_viga.sldprt": 62941
+        "bv_viga.pdf": 39746,
+        "bv_viga.slddrw": 76405,
+        "bv_viga.sldprt": 63785
       },
       "domain": "dwg",
       "name": "dwg_folha_e_vistas",
@@ -5679,7 +5679,7 @@
     {
       "arquivos": {
         "bv_caixa.dxf": 22459,
-        "bv_caixa.sldprt": 127097
+        "bv_caixa.sldprt": 128720
       },
       "domain": "part",
       "name": "chapa_caixa_planifica",
@@ -12672,9 +12672,9 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_furado.sldprt": 70732,
-        "cv_tampa.sldprt": 63816
+        "cv_base.sldprt": 64917,
+        "cv_furado.sldprt": 72595,
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_pecas_de_apoio",
@@ -13121,8 +13121,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_tampa.sldprt": 63816
+        "cv_base.sldprt": 64917,
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_asm_grounding",
@@ -13700,8 +13700,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_tampa.sldprt": 63816
+        "cv_base.sldprt": 64917,
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_asm_mover_medir",
@@ -14099,8 +14099,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_tampa.sldprt": 63816
+        "cv_base.sldprt": 64917,
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_asm_mate_e_apagar",
@@ -14794,9 +14794,9 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_datum.sldasm": 52438,
-        "cv_tampa.sldprt": 63816
+        "cv_base.sldprt": 64917,
+        "cv_datum.sldasm": 53011,
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_asm_mate_planes",
@@ -15192,10 +15192,10 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 64972,
-        "cv_conjunto.sldasm": 58002,
+        "cv_base.sldprt": 64917,
+        "cv_conjunto.sldasm": 59367,
         "cv_conjunto.x_t": 10986,
-        "cv_tampa.sldprt": 63816
+        "cv_tampa.sldprt": 64655
       },
       "domain": "asm",
       "name": "cv_asm_espelho_explode",
@@ -16303,8 +16303,8 @@
     },
     {
       "arquivos": {
-        "cv_furado.pdf": 67715,
-        "cv_furado.slddrw": 90265
+        "cv_furado.pdf": 67713,
+        "cv_furado.slddrw": 92355
       },
       "domain": "dwg",
       "name": "cv_dwg_carimbo_corte",

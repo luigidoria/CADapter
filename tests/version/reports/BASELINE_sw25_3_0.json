@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T18:59:40+00:00",
-    "git_commit": "2490209",
-    "python": "3.12.10",
-    "seconds": 2048.5,
+    "generated_at": "2026-09-30T01:36:21+00:00",
+    "git_commit": "db6804a",
+    "python": "3.13.13",
+    "seconds": 1626.7,
     "server_verbs": null,
     "surfaces": [
       "curated"
@@ -3388,7 +3388,7 @@
             ],
             "caixa_parcial": false,
             "com_mm": [
-              0.0,
+              -0.0,
               30.0,
               7.5
             ],
@@ -4419,10 +4419,10 @@
     },
     {
       "arquivos": {
-        "bv_bloco.sldprt": 46207,
-        "bv_bloco.step": 15920,
+        "bv_bloco.sldprt": 54538,
+        "bv_bloco.step": 15935,
         "bv_bloco.stl": 684,
-        "bv_bloco.x_t": 5329
+        "bv_bloco.x_t": 5323
       },
       "domain": "part",
       "name": "exportar_formatos",
@@ -4616,8 +4616,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 42704,
-        "bv_tampa.sldprt": 43757
+        "bv_base.sldprt": 51908,
+        "bv_tampa.sldprt": 52233
       },
       "domain": "asm",
       "name": "asm_pecas_de_apoio",
@@ -4784,8 +4784,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 42704,
-        "bv_tampa.sldprt": 43757
+        "bv_base.sldprt": 51908,
+        "bv_tampa.sldprt": 52233
       },
       "domain": "asm",
       "name": "asm_mate_faces_empilhado",
@@ -5069,8 +5069,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 42704,
-        "bv_tampa.sldprt": 43757
+        "bv_base.sldprt": 51908,
+        "bv_tampa.sldprt": 52233
       },
       "domain": "asm",
       "name": "asm_mate_ordem_invertida",
@@ -5308,8 +5308,8 @@
     },
     {
       "arquivos": {
-        "bv_base.sldprt": 42704,
-        "bv_tampa.sldprt": 43757
+        "bv_base.sldprt": 51908,
+        "bv_tampa.sldprt": 52233
       },
       "domain": "asm",
       "name": "asm_remover_e_recontar",
@@ -5539,9 +5539,9 @@
     },
     {
       "arquivos": {
-        "bv_viga.pdf": 21174,
-        "bv_viga.slddrw": 62793,
-        "bv_viga.sldprt": 50408
+        "bv_viga.pdf": 22400,
+        "bv_viga.slddrw": 69408,
+        "bv_viga.sldprt": 59619
       },
       "domain": "dwg",
       "name": "dwg_folha_e_vistas",
@@ -5678,8 +5678,8 @@
     },
     {
       "arquivos": {
-        "bv_caixa.dxf": 24825,
-        "bv_caixa.sldprt": 114357
+        "bv_caixa.dxf": 25552,
+        "bv_caixa.sldprt": 120880
       },
       "domain": "part",
       "name": "chapa_caixa_planifica",
@@ -6474,7 +6474,7 @@
             "Cutting Length-Inner": 0.0,
             "Cutting Length-Outer": 466.27,
             "Description": "Sheet",
-            "Mass": "22,97",
+            "Mass": 22.97,
             "Material": "Material <not specified>",
             "QUANTITY": 1.0,
             "Sheet Metal Thickness": 2.0,
@@ -10801,22 +10801,22 @@
             [
               "<IFace2>",
               "<IFace2>",
-              1.5620499351812849
+              1.5620499351812809
             ],
             [
               "<IFace2>",
               "<IFace2>",
-              4.123105625617704
+              4.123105625617698
             ],
             [
               "<IFace2>",
               "<IFace2>",
-              4.123105625617704
+              4.123105625617699
             ],
             [
               "<IFace2>",
               "<IFace2>",
-              4.123105625617722
+              4.1231056256177165
             ]
           ],
           "signature": {
@@ -12182,7 +12182,7 @@
               "Cutting Length-Inner": 0.0,
               "Cutting Length-Outer": 320.0,
               "Description": "Sheet",
-              "Mass": "18,00",
+              "Mass": 18.0,
               "Material": "Material <not specified>",
               "QUANTITY": 1.0,
               "Sheet Metal Thickness": 3.0,
@@ -12205,7 +12205,7 @@
               "Cutting Length-Inner": 0.0,
               "Cutting Length-Outer": 240.0,
               "Description": "Sheet",
-              "Mass": "9,60",
+              "Mass": 9.6,
               "Material": "Material <not specified>",
               "QUANTITY": 1.0,
               "Sheet Metal Thickness": 3.0,
@@ -12594,7 +12594,7 @@
             "Cutting Length-Outer": 292.57,
             "Description": "Sheet",
             "MATERIAL": "Material <not specified>",
-            "Mass": "9,63",
+            "Mass": 9.63,
             "QUANTITY": 1.0,
             "Sheet Metal Thickness": 2.0,
             "Surface Treatment": "Finish <not specified>"
@@ -12668,9 +12668,9 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_furado.sldprt": 59133,
-        "cv_tampa.sldprt": 51608
+        "cv_base.sldprt": 61159,
+        "cv_furado.sldprt": 67778,
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_pecas_de_apoio",
@@ -13117,8 +13117,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_tampa.sldprt": 51608
+        "cv_base.sldprt": 61159,
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_asm_grounding",
@@ -13696,8 +13696,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_tampa.sldprt": 51608
+        "cv_base.sldprt": 61159,
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_asm_mover_medir",
@@ -14095,8 +14095,8 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_tampa.sldprt": 51608
+        "cv_base.sldprt": 61159,
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_asm_mate_e_apagar",
@@ -14790,9 +14790,9 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_datum.sldasm": 39130,
-        "cv_tampa.sldprt": 51608
+        "cv_base.sldprt": 61159,
+        "cv_datum.sldasm": 48693,
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_asm_mate_planes",
@@ -15188,10 +15188,10 @@
     },
     {
       "arquivos": {
-        "cv_base.sldprt": 50670,
-        "cv_conjunto.sldasm": 45178,
+        "cv_base.sldprt": 61159,
+        "cv_conjunto.sldasm": 54676,
         "cv_conjunto.x_t": 10326,
-        "cv_tampa.sldprt": 51608
+        "cv_tampa.sldprt": 61337
       },
       "domain": "asm",
       "name": "cv_asm_espelho_explode",
@@ -16299,8 +16299,8 @@
     },
     {
       "arquivos": {
-        "cv_furado.pdf": 48344,
-        "cv_furado.slddrw": 74993
+        "cv_furado.pdf": 49474,
+        "cv_furado.slddrw": 80913
       },
       "domain": "dwg",
       "name": "cv_dwg_carimbo_corte",

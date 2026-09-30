@@ -8,7 +8,7 @@ full procedure are in the [testing guide](../docs/TESTING.md).
 
 The frozen V1 result is 543/543 required compatibility steps on both SOLIDWORKS 2017
 (25.3.0) and SOLIDWORKS 2026 (34.3.2), using code commit
-`2490209328ffc48212dc7900d65d3ead6a173085`. The complete regression counts and the
+`db6804ae183673d99440164bccdc30c3d10ede80`. The complete regression counts and the
 investigated cross-version differences are in the
 [V1 validation record](../docs/TESTING.md#frozen-v1-validation).
 

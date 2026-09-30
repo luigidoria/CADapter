@@ -19,7 +19,10 @@ and safety details in [`tests/README.md`](../tests/README.md).
 
 ## Frozen V1 validation
 
-Validated code commit: `2490209328ffc48212dc7900d65d3ead6a173085`.
+Validated code commit: `db6804ae183673d99440164bccdc30c3d10ede80`, measured with
+`tests/run_v1_battery.ps1` on 2026-09-29. The committed baselines
+`tests/version/reports/BASELINE_sw25_3_0.json` and `BASELINE_sw34_3_2.json` are the
+compatibility reports of these two runs.
 
 | Evidence | SOLIDWORKS 2017 | SOLIDWORKS 2026 |
 |---|---:|---:|
@@ -33,16 +36,30 @@ Validated code commit: `2490209328ffc48212dc7900d65d3ead6a173085`.
 | Usable drawings | 17/17 PASS | 17/17 PASS |
 | Part + Sketch + Inspection | 64/64 PASS | 64/64 PASS |
 | Sheet Metal | 234/234 PASS | 231/231 PASS |
-| Additional outcomes | 2 accepted KNOWN | 2 optional SKIP |
+| Additional outcomes | 3 accepted KNOWN | 2 optional SKIP |
 
-The two SW2017 KNOWN outcomes concern installed bend-table behavior; they are accepted
-known results, not passes. The two SW2026 optional skips occurred because installed
-bend-table resources were unavailable; they are not passes. Later documentation or
-release-evidence commits are not themselves claims of another SOLIDWORKS run.
+The three SW2017 KNOWN outcomes are bend tables that SOLIDWORKS 2017 intermittently
+refuses (on a 3.0 mm sheet, with `sample.btl`, and on a miter flange); the verb reports
+the refusal and restores the default allowance. They are accepted known results, not
+passes, and their number can vary between runs. The two SW2026 optional skips occurred
+because installed bend-table resources were unavailable; they are not passes. Later
+documentation or release-evidence commits are not themselves claims of another
+SOLIDWORKS run.
+
+Test environment: both versions ran on the same Windows machine, where SOLIDWORKS 2017
+and 2026 are installed side by side, each in a freshly started session with no other
+CAD client attached. CADapter attaches to `SldWorks.Application` and binds to the
+highest registered SOLIDWORKS type library; on this machine both resolve to 2026. For
+the SW2017 run, per-user (HKCU) registry overrides pointed both at the 2017
+installation and were removed afterwards. Without them, a SW2017 session driven through
+the 2026 type library fails on `IComponent2.GetSuppression2`. The factory default part
+and assembly templates were missing from that SW2017 installation, so it used the
+installed English tutorial templates with the reference planes renamed to
+`Front Plane`, `Top Plane` and `Right Plane`.
 
 ### Same-commit cross-version comparison
 
-The reports from the validated commit produced `ASSEMBLY=7`, `RESULT=29` and `FILE=3`.
+The reports from the validated commit produced `ASSEMBLY=7`, `RESULT=28` and `FILE=2`.
 These are investigated representation or solver differences, not compatibility-suite
 failures: each version completed all 543 required steps.
 
@@ -51,21 +68,21 @@ failures: each version completed all 543 required steps.
   Both versions report zero mate errors and zero interference, but choose different
   free Z positions. The requested mate succeeds; final assembly coordinates are not
   identical across versions.
-- The 29 result findings include `Front Plane` versus `Front`, filename-extension
-  casing, equivalent list ordering, tiny floating-point differences,
-  SOLIDWORKS-specific metadata/property names, one additional automatic section-view
-  annotation in SW2026, and cut-list representation differences. None represents
-  different requested geometry.
-- Three generated files differ by more than 25% in size. No evidence indicates that
+- The 28 result findings are `Front Plane` (SW2017) versus `Front` (SW2026) as the
+  sketch plane name, filename-extension casing (`.sldprt` versus `.SLDPRT`), equivalent
+  list ordering (sheet bodies, explode steps), SOLIDWORKS-specific metadata and
+  property names (`ExplView1` versus `Exploded View1`, `Material` versus `MATERIAL`,
+  `Sheet Metal Gauge` present only in SW2026), and one additional automatic
+  section-view annotation in SW2026. None represents different requested geometry.
+- Two generated PDF files differ by more than 25% in size. No evidence indicates that
   they are invalid; SOLIDWORKS serialization and PDF generation vary by version.
 
-On the tested SW2017 installation, cut-list `Mass` can be localized text such as
-`"22,97"`; SW2026 can return the numeric value `22.97`. A targeted SW2017 A/B test
-produced the localized text both when the sheet-metal scenario ran alone and when a
-drawing scenario ran first. It was therefore not caused by CADapter's drawing
-workflow. Treat this as a SOLIDWORKS version, environment or locale difference.
-Cut-list property names can also vary (`Material` versus `MATERIAL`), and a property
-may exist in only one version.
+Cut-list `Mass` can come back as localized text such as `"22,97"` from some SW2017
+installations (observed on an earlier validation machine, independent of CADapter's
+drawing workflow) and as the numeric value `22.97` from others; in this run both
+versions returned numbers. Treat it as a SOLIDWORKS version, environment or locale
+difference. Cut-list property names can also vary (`Material` versus `MATERIAL`), and a
+property may exist in only one version.
 
 ## The cross-version battery
 

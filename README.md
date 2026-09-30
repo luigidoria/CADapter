@@ -16,6 +16,11 @@ installation. CADapter V1 was validated on SOLIDWORKS 2017 (25.3.0) and SOLIDWOR
 results and investigated version-dependent differences are in the
 [validation record](docs/TESTING.md#frozen-v1-validation).
 
+CADapter exposes its SOLIDWORKS automation capabilities through MCP and is designed to
+be usable by MCP-compatible AI agents. The current V1 has been tested end-to-end with
+Claude Code on SOLIDWORKS 2017 and 2026. Other MCP clients have not yet been formally
+validated.
+
 ## Showcases
 
 The engineering workflow connects:
@@ -146,6 +151,6 @@ CADapter is licensed under [Apache-2.0](LICENSE).
 ## Validation provenance
 
 The frozen V1 measurements apply to code commit
-`2490209328ffc48212dc7900d65d3ead6a173085`. The later baseline refresh and
+`db6804ae183673d99440164bccdc30c3d10ede80`, the first commit of this repository. Later
 documentation changes do not imply another SOLIDWORKS run. See the
 [validation record](docs/TESTING.md#frozen-v1-validation) for the complete results.
