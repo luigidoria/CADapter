@@ -150,6 +150,12 @@ and [curated API guide](solidworks/README.md).
 
 CADapter is licensed under [Apache-2.0](LICENSE).
 
+## Acknowledgements
+
+CADapter was developed as an independent project by a student at the Federal University of Santa Catarina (UFSC), with access to the SolidWorks educational license provided by the university.
+
+Thanks to UFSC for providing the academic environment and resources that supported the development and testing of this project.
+
 ## Validation provenance
 
 The frozen V1 measurements apply to code commit
