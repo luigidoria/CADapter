@@ -19,10 +19,7 @@ and safety details in [`tests/README.md`](../tests/README.md).
 
 ## Frozen V1 validation
 
-Validated code commit: `db6804ae183673d99440164bccdc30c3d10ede80`, measured with
-`tests/run_v1_battery.ps1` on 2026-09-29. The committed baselines
-`tests/version/reports/BASELINE_sw25_3_0.json` and `BASELINE_sw34_3_2.json` are the
-compatibility reports of these two runs.
+Validated code commit: `db6804ae183673d99440164bccdc30c3d10ede80`.
 
 | Evidence | SOLIDWORKS 2017 | SOLIDWORKS 2026 |
 |---|---:|---:|
