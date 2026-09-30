@@ -56,7 +56,7 @@ validated.
 ## Configuration and troubleshooting
 
 Configuration is optional. See `mcp_server/.env.example`; use
-`mcp_server/.env` only for overrides. An existing root `.env` remains supported.
+`mcp_server/.env` only for overrides.
 
 Recipe search (RAG) is optional. The core CAD tools do not need it and start without
 recipes or Chroma. The repository ships no recipe content or prebuilt index.
